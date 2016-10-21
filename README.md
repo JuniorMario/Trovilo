@@ -12,7 +12,7 @@ Opção               |  Descrição | Aplicação
 
 
 
-* Uso do  `-Wordlist=`:
+* Uso do  `-Wordlist=`:  
 _Caminho Simples_: pasta/arquivo.txt  
 _Mútiplas Wordlist_: :file.txt:anotherfile.txt:anotherfile.txt  
 _Wordlists em um diretório_: /diretório  
