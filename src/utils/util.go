@@ -13,6 +13,7 @@ import (
 type Conf struct {
 	Wordlist  string
 	Content   []string
+	url       string
 	Set_Proxy bool
 }
 
