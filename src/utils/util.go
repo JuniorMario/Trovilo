@@ -27,13 +27,19 @@ func check_error(err error) {
 
 func NewConf(filename string) Conf {
 	var res []string
-	dat, _ := ioutil.ReadFile(filename)
+	dat, _ := ioutil.ReadFile("wordlist/" + filename)
 	res = strings.Split(string(dat), "\n")
 	Config = Conf{Wordlist: filename, Content: res}
 	return Config
 }
+func read() string {
+	dat, err := ioutil.ReadFile("output/" + "res.txt")
+	check_error(err)
+	return string(dat) + "\n"
+}
 func Write(url string) {
-	res := []byte(url)
+	rs := read() + url
+	res := []byte(rs)
 	_ = ioutil.WriteFile("output/res.txt", res, 0644)
 }
 func Banner() {
